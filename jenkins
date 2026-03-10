@@ -1,0 +1,22 @@
+pipeline{
+  agent any
+stages{
+  stage('Checkout'){
+    step{
+      git 'https://github.com/chaitumarar-dotcom/my-first-repo.git'
+    }
+   }
+stage('Publish')
+steps{
+publishhtML[{
+  allowmissing:true,
+  alwaysLinktoLastBuild:false,
+  KeepAll:false,
+  reportDir:'.',
+  reportFiles:'index.html',
+  reportName:'MY HTML PIPE PAGE'
+    ]}
+   }
+  }
+ }
+}
